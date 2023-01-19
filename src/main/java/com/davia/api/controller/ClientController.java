@@ -33,7 +33,7 @@ public class ClientController {
         return clientService.ListClients();
     }
 
-    @GetMapping("/Client/{id")
+    @GetMapping("/Client/{id}")
     public ResponseEntity<Client> getClient(@PathVariable Integer id) {
         try {
             Client client = clientService.getClientById(id);
