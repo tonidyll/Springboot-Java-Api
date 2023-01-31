@@ -29,4 +29,7 @@ public class ClientService {
     public void deleteClient (Integer id){
         repository.deleteById(id);
     }
+    public void editClient (Integer id){
+        repository.existsById(id);
+    }
 }
