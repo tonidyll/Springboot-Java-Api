@@ -3,33 +3,41 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.ClientService to edit this template
  */
 package com.davia.api.service;
-import com.davia.api.Modelo.Client;
-import com.davia.api.Repository.ClientRepository;
+
+import com.davia.api.Modelo.Country;
+import com.davia.api.Repository.CountryRepository;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+
 /**
  *
  * @author antonidavyll
  */
 @Service
-public class CategoryService {
+public class CountryService {
+
     @Autowired
-    private CategoryRepository repository;
-    
-    public List <Client>ListCategories(){
+    private CountryRepository repository;
+
+    public List<Country> ListCountries() {
         return repository.findAll();
     }
-    public void saveCategories (Client client){
-        repository.save(client);
+
+    public void saveCountries(Country country) {
+        repository.save(country);
     }
-    public Client getCategoryId (Integer id){
+
+    public Country getCountryById(Integer id) {
         return repository.findById(id).get();
     }
-    public void deleteCategory (Integer id){
+
+    public void deleteCountry(Integer id) {
         repository.deleteById(id);
     }
-    public void editCategory (Integer id){
+
+    public void editCountry(Integer id) {
         repository.existsById(id);
     }
+
 }

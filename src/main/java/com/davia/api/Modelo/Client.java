@@ -7,6 +7,8 @@ package com.davia.api.Modelo;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,6 +19,8 @@ public class Client {
     @Id @GeneratedValue
     private Integer Id;
     private String Username;
-    private String last_name;
-    private String country;
+    private String last_name; 
+    @ManyToOne
+    @JoinColumn(name = "country")
+    private Country country;
 }

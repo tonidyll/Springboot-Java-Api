@@ -5,7 +5,7 @@
 package com.davia.api.controller;
 
 import com.davia.api.service.ClientService;
-                        import com.davia.api.Modelo.Client;
+import com.davia.api.Modelo.Client;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

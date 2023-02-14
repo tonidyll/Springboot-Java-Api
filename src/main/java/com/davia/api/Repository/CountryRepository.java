@@ -4,12 +4,12 @@
  */
 package com.davia.api.Repository;
 
-import com.davia.api.Modelo.Category;
+import com.davia.api.Modelo.Country;
 import org.springframework.data.jpa.repository.JpaRepository;
 /**
  *
  * @author antonidavyll
  */
-public interface CategoryRepository extends JpaRepository<Category,Integer>{
+public interface CountryRepository extends JpaRepository<Country,Integer>{
     
 }
