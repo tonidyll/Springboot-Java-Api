@@ -53,7 +53,7 @@ public class ClientController {
         try {
             Client clientExist = clientService.getClientById(id);
             clientExist.setUsername(client.getUsername());
-            clientExist.setLast_name(client.getLast_name());
+            clientExist.setLastName(client.getLastName());
             clientExist.setCountry(client.getCountry());
             clientService.saveClients(clientExist);
             return new ResponseEntity<Client>(client, HttpStatus.OK);

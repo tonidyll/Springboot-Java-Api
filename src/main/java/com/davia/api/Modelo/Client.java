@@ -4,6 +4,8 @@
  */
 package com.davia.api.Modelo;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -12,15 +14,23 @@ import javax.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 @Entity
-@Data @NoArgsConstructor @AllArgsConstructor
+@Data 
+@NoArgsConstructor 
+@AllArgsConstructor
 public class Client {
-    @Id @GeneratedValue
-    private Integer Id;
-    private String Username;
-    private String last_name; 
+    @Id 
+    @GeneratedValue
+    private Integer id;
+    private String username;
+    @Column(name="last_name")
+    private String lastName; 
     @ManyToOne
-    @JoinColumn(name = "country")
+    @JoinColumn(name = "country_id")
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    @OnDelete(action = OnDeleteAction.CASCADE)
     private Country country;
 }
