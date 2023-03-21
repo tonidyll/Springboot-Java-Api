@@ -19,7 +19,7 @@ import java.util.logging.Logger;
  */
 public class view extends javax.swing.JFrame {
     HttpClient client = HttpClient.newBuilder().version(HttpClient.Version.HTTP_2).build();
-    String Url = "http://api.com/src/controller/ClientController.java?bs=";
+    String Url = "http://api.com/src/controller/empleadoController.java?bs=";
     public view(){
     initComponents();
     show();
